@@ -1,6 +1,8 @@
 
 @available(iOS 13.0, macOS 11.0, tvOS 13.0, watchOS 6.0, *)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public class SFSymbol: RawRepresentable, Equatable, Hashable {
     public let rawValue: String
 

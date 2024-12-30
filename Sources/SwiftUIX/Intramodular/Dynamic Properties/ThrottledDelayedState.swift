@@ -7,7 +7,9 @@ import Swift
 import SwiftUI
 
 @propertyWrapper
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct ThrottledDelayedState<Value>: DynamicProperty {
     let delay: DispatchTimeInterval?
     

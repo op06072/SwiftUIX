@@ -10,7 +10,9 @@ public protocol _CustomOptionalDimensionsConvertible {
 }
 
 @_frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct OptionalDimensions: ExpressibleByNilLiteral, Hashable {
     public static var greatestFiniteDimensions: OptionalDimensions {
         .init(width: .greatestFiniteMagnitude, height: .greatestFiniteMagnitude)

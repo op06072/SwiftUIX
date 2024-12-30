@@ -4,7 +4,9 @@
 
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct EmptyAppKitOrUIKitViewRepresentable: View {
     private let update: (any _AppKitOrUIKitViewRepresentableContext) -> Void
     private let dismantle: () -> Void

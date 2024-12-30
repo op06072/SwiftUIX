@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 /// A modifier that controls a view's visibility.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _VisibilityModifier: ViewModifier {
     @usableFromInline
     let isVisible: Bool

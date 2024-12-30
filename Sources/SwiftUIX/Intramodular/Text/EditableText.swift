@@ -10,9 +10,13 @@ import SwiftUI
 @available(iOS 15.0, macOS 12.0, *)
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct EditableText: View {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum Activation {
         case onDoubleTap
     }

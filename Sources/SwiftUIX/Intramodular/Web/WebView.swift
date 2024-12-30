@@ -9,7 +9,9 @@ import Swift
 import SwiftUI
 import WebKit
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct WebView: View {
     private var configuration: _WKWebViewRepresentable.Configuration
     private var appKitOrUIKitViewBinding: Binding<_SwiftUIX_WKWebView?>? = nil
@@ -124,7 +126,9 @@ struct _WKWebViewRepresentable: AppKitOrUIKitViewRepresentable {
     public typealias AppKitOrUIKitViewType = _SwiftUIX_WKWebView
     
     struct Configuration: Hashable {
-        @_documentation(visibility: internal)
+        #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
         public enum Source: Hashable, Sendable {
             case url(URL)
             case htmlString(String)

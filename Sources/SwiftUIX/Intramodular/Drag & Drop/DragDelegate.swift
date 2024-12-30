@@ -15,14 +15,18 @@ public protocol DragDelegate {
 }
 
 /// The current state of a drag.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct DragInfo {
     public let items: [DragItem]
 }
 
 // MARK: - Auxiliary
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct AnyDragDelegate: DragDelegate {
     let dragBeganImpl: (DragInfo) -> ()
     let dragUpdatedImpl: (DragInfo) -> ()

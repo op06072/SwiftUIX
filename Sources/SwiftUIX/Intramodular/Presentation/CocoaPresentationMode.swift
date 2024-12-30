@@ -7,7 +7,9 @@ import SwiftUI
 
 #if os(iOS) || os(macOS) || os(tvOS) || os(visionOS) || targetEnvironment(macCatalyst)
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct CocoaPresentationMode: PresentationManager {
     var presentationCoordinatorBox: _SwiftUIX_ObservableWeakReferenceBox<CocoaPresentationCoordinator>
     

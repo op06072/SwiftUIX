@@ -9,7 +9,9 @@ import Foundation
 import SwiftUI
 
 /// A view whose interface lets the user manage, edit, and send email messages.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct MailComposer: UIViewControllerRepresentable {
     public typealias UIViewControllerType = MFMailComposeViewController
     

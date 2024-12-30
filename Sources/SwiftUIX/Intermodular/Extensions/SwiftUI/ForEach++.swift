@@ -235,7 +235,9 @@ extension RandomAccessCollection {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _IdentifiableElementOffsetPair<Element: Identifiable, Offset>: Identifiable {
     let element: Element
     let offset: Offset
@@ -250,7 +252,9 @@ public struct _IdentifiableElementOffsetPair<Element: Identifiable, Offset>: Ide
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _OffsetIdentifiedElementOffsetPair<Element, Offset> {
     let element: Element
     let offset: Offset
@@ -261,7 +265,9 @@ public struct _OffsetIdentifiedElementOffsetPair<Element, Offset> {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _KeyPathIdentifiableElementOffsetPair<Element, Offset, ID: Hashable>: Identifiable {
     let element: Element
     let offset: Offset

@@ -13,7 +13,9 @@ public protocol _AppKitOrUIKitRepresented: AnyObject, AppKitOrUIKitResponder {
     func _performOrSchedulePublishingChanges(_: @escaping () -> Void)
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _AppKitOrUIKitRepresentableStateFlags: OptionSet {
     public let rawValue: UInt
     
@@ -27,9 +29,13 @@ public struct _AppKitOrUIKitRepresentableStateFlags: OptionSet {
     public static let dismantled = Self(rawValue: 1 << 3)
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _AppKitOrUIKitRepresentableCache: ExpressibleByNilLiteral {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum Attribute {
         case intrinsicContentSize
     }

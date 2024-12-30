@@ -6,7 +6,11 @@ import SwiftUI
 
 /// A type to mirror `SwiftUI.RedactionReasons`, added for compatibility.
 /// The reasons to apply a redaction to data displayed on screen.
+#if swift(>=5.8)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
+#endif
 public struct RedactionReasons: OptionSet {
     /// The raw value.
     public let rawValue: Int

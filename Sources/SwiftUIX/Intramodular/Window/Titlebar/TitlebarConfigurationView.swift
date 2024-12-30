@@ -8,7 +8,9 @@ import AppKit
 import Swift
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _WindowToolbarStyle {
     case automatic
     case expanded
@@ -16,7 +18,9 @@ public enum _WindowToolbarStyle {
     case unifiedCompact
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct TitlebarConfigurationView<Content: View>: AppKitOrUIKitViewRepresentable {
     public typealias AppKitOrUIKitViewType = AppKitOrUIKitView
     

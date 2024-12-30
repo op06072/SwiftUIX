@@ -5,7 +5,9 @@
 import Swift
 
 @propertyWrapper
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _SwiftUIX_ObjectIdentifierHashed<Wrapped>: Hashable {
     public let _hashImpl: (Wrapped, inout Hasher) -> Void
     public var wrappedValue: Wrapped

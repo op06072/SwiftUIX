@@ -8,9 +8,13 @@ import Swift
 import SwiftUI
 import UIKit
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct PaginationState: Hashable {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum TransitionDirection: Hashable {
         case backward
         case forward
@@ -26,7 +30,9 @@ public enum TransitionDirection: Hashable {
 
 /// A view that paginates its children along a given axis.
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct PaginationView<Page: View>: View {
     @usableFromInline
     let content: AnyForEach<Page>

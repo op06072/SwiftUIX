@@ -7,7 +7,9 @@ import Swift
 import SwiftUI
 
 /// Environment values and objects captured for insertion into view hierarchies.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct EnvironmentInsertions {
     var valuesByKeyPath: [PartialKeyPath<EnvironmentValues>: Any] = [:]
     var environmentValuesTransforms: [AnyHashable: (inout EnvironmentValues) -> Void] = [:]

@@ -23,7 +23,9 @@ public protocol SwitchOverCaseView: ControlFlowView {
 }
 
 /// A view representing first `case` statement in a `switch` control flow.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct SwitchOverCaseFirstView<Data, Content: View>: SwitchOverCaseView {
     public let comparator: Data
     public let predicate: (Data) -> Bool
@@ -65,7 +67,9 @@ extension SwitchOverCaseFirstView where Data: Equatable {
 }
 
 /// A view representing a noninitial `case` statement in a `switch` control flow.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct SwitchOverCaseNextView<PreviousCase: SwitchOverCaseView, Content: View>: SwitchOverCaseView {
     public typealias Data = PreviousCase.Data
     
@@ -122,7 +126,9 @@ extension SwitchOverCaseNextView where Data: Equatable {
 }
 
 /// A view representing a `default` statement in a `switch` control flow.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct SwitchOverCaseDefaultView<PreviousCase: SwitchOverCaseView, Content: View>: View {
     public typealias Data = PreviousCase.Data
     

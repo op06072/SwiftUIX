@@ -9,7 +9,9 @@ import Swift
 import SwiftUI
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _CocoaHostingViewStateFlag {
     case didJustMoveToSuperview
     case hasAppearedAndIsCurrentlyVisible
@@ -27,7 +29,9 @@ public enum _CocoaHostingViewStateFlag {
 ///
 /// And during the execution of your operation, that flag will be in effect. It is used by `_PlatformTableView` and other performance-critical views to override UIKit/AppKit to make it play nicer with SwiftUI and avoid redundant computation where we (the developer) know that SwiftUI is already observing/handling some computation, and UIKit/AppKit needs to be suppressed.
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _CocoaHostingViewConfigurationFlag {
     case invisible
     case disableResponderChain
@@ -37,7 +41,9 @@ public enum _CocoaHostingViewConfigurationFlag {
     case suppressIntrinsicContentSizeInvalidation
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 open class _CocoaHostingView<Content: View>: AppKitOrUIKitHostingView<CocoaHostingControllerContent<Content>>, _CocoaHostingControllerOrView {
     public typealias MainView = Content
     public typealias RootView = CocoaHostingControllerContent<Content>

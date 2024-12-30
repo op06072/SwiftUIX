@@ -4,7 +4,9 @@
 
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _TypeToViewTraitKeyAdaptor<T>: _ViewTraitKey {
     public typealias Value = T?
     

@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 /// A view's modal presentation style.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum ModalPresentationStyle: Equatable {
     case fullScreen
     
@@ -94,7 +96,9 @@ extension View {
 // MARK: - Auxiliary
 
 extension ModalPresentationStyle {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum _Comparison {
         case popover
     }

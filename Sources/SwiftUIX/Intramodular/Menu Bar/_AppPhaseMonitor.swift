@@ -6,9 +6,13 @@
 
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public class _AppPhaseMonitor: NSObject {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum Phase {
         case uninitialized
         case initialized

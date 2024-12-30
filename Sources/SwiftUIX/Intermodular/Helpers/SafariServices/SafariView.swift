@@ -10,7 +10,9 @@ import SwiftUI
 /// A view that provides a visible standard interface for browsing the web.
 ///
 /// This view has its own navigation bar and bottom toolbar.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct SafariView: View {
     fileprivate struct Configuration {
         var url: URL

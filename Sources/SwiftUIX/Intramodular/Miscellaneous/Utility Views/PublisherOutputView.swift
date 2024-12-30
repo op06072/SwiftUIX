@@ -7,7 +7,9 @@ import Swift
 import SwiftUI
 
 /// A view that eventually produces its content.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct PublisherOutputView<P: Publisher, Placeholder: View, Content: View>: View {
     public typealias SubscriptionPolicy = _PublisherObserver<P, DispatchQueue>.SubscriptionPolicy
     

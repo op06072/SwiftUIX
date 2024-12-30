@@ -19,7 +19,9 @@ private struct SidebarVisibilityModifier: ViewModifier {
 
 // MARK: - API
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _SidebarVisibility {
     case automatic
     case visible

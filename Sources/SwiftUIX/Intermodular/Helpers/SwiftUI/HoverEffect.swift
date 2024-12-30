@@ -9,7 +9,9 @@ import SwiftUI
 @available(tvOS 16.0, *)
 @available(watchOS, unavailable)
 @available(OSX, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum HoverEffect {
     /// An effect  that attempts to determine the effect automatically.
     /// This is the default effect.

@@ -5,7 +5,9 @@
 import Swift
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum FrameDimensionType: Hashable {
     case width
     case height
@@ -46,7 +48,9 @@ extension ProposedViewSize {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct RelativeFrame: ExpressibleByNilLiteral, Hashable {
     struct PreferenceKey: SwiftUI.PreferenceKey {
         static let defaultValue: [RelativeFrame] = []
@@ -110,7 +114,9 @@ public struct RelativeFrame: ExpressibleByNilLiteral, Hashable {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum RelativeFrameDimension: Hashable {
     public struct FractionalValue: Hashable {
         let dimension: FrameDimensionType

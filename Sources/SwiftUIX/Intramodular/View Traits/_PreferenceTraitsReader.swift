@@ -5,7 +5,9 @@
 import SwiftUI
 
 /// A view whose child is defined as a function of a preference value read from within the child.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _PreferenceTraitsReader<Content: View>: View {
     private let content: (_PreferenceTraitsStorage) -> Content
     

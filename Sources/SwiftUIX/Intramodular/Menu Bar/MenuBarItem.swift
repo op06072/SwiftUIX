@@ -10,7 +10,9 @@ import Swift
 import SwiftUI
 
 /// A model that represents an item which can be placed in the menu bar.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct MenuBarItem<ID, Label: View, Content: View> {
     public let id: ID
     
@@ -170,7 +172,9 @@ extension View {
 
 // MARK: - Auxiliary
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _MenuBarExtraLabelContent: Hashable, View {
     case image(_AnyImage)
     case text(String)

@@ -5,7 +5,9 @@
 import SwiftUI
 
 @propertyWrapper
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct WeakState<Value: AnyObject>: DynamicProperty {
     @usableFromInline
     struct Storage {

@@ -8,7 +8,9 @@ import SwiftUI
 
 /// A property wrapper type that instantiates an observable object.
 @propertyWrapper
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct PersistentObject<Value>: DynamicProperty {
     private let thunk: () -> AnyObject?
     

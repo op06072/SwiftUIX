@@ -8,7 +8,9 @@ import SwiftUI
 
 #if (os(iOS) && canImport(CoreTelephony)) || os(tvOS) || targetEnvironment(macCatalyst)
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct CollectionView: View {
     public typealias Offset = ScrollView<AnyView>.ContentOffset
     

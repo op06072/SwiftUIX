@@ -8,7 +8,9 @@ import SwiftUI
 
 /// A dynamic view property that subscribes to a `Publisher` automatically invalidating the view when it publishes.
 @propertyWrapper
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct ObservedPublisher<P: Publisher>: DynamicProperty where P.Failure == Never {
     private let publisher: P
     

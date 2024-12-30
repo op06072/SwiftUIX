@@ -7,7 +7,9 @@ import SwiftUI
 /// A view for presenting a stack of views.
 ///
 /// Like `NavigationView`, but for modal presentation.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct PresentationView<Content: View>: View {
     private let content: Content
 

@@ -15,7 +15,9 @@ import UIKit
 #endif
 
 /// A value relative to one or multiple coordinate spaces.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _CoordinateSpaceRelative<Value: Equatable & Sendable>: Equatable, Sendable {
     private var storage: [_ScreenOrCoordinateSpace: Value] = [:]
     

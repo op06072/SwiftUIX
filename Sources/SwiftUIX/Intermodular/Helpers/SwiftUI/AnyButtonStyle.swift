@@ -5,7 +5,9 @@
 import SwiftUI
 
 /// A type-erased wrapper for `ButtonStyle.`
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct AnyButtonStyle: ButtonStyle {
     public let _makeBody: (Configuration) -> AnyView
     

@@ -9,7 +9,9 @@ import Swift
 import SwiftUI
 
 /// A rich visual representation of a link.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct LinkPresentationView<Placeholder: View>: Identifiable, View {
     let url: URL?
     let metadata: LPLinkMetadata?

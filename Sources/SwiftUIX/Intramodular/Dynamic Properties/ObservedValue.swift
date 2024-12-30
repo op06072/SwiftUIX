@@ -16,7 +16,9 @@ public struct ObservedValueConfiguration<Value> {
 
 @dynamicMemberLookup
 @propertyWrapper
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct ObservedValue<Value>: DynamicProperty {
     public var configuration = ObservedValueConfiguration<Value>()
     

@@ -7,7 +7,9 @@ import SwiftUI
 
 #if os(iOS) || targetEnvironment(macCatalyst)
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct AppActivityView: UIViewControllerRepresentable {
     public typealias UIViewControllerType = UIActivityViewController
     

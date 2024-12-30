@@ -8,7 +8,9 @@ import SwiftUI
 
 #if os(iOS) || os(macOS) || os(tvOS) || targetEnvironment(macCatalyst)
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct AttributedText: AppKitOrUIKitViewRepresentable {
     public typealias AppKitOrUIKitViewType = AppKitOrUIKitLabel
     

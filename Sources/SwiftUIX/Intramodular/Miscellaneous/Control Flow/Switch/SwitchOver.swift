@@ -5,7 +5,9 @@
 import SwiftUI
 
 /// A view representing the start of a `switch` control flow.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct SwitchOver<Data>: View {
     public let comparator: Data
     

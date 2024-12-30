@@ -28,7 +28,9 @@ extension Hashable {
 }
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _HashIdentifiableValue<Value: Hashable>: CustomStringConvertible, _HashIdentifiable {
     public let value: Value
     
@@ -43,7 +45,9 @@ public struct _HashIdentifiableValue<Value: Hashable>: CustomStringConvertible, 
 }
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _KeyPathEquatable<Root, Value: Equatable>: Equatable {
     public let root: Root
     public let keyPath: KeyPath<Root, Value>
@@ -62,7 +66,9 @@ public struct _KeyPathEquatable<Root, Value: Equatable>: Equatable {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _KeyPathHashable<Root, Value: Hashable>: Hashable {
     public let root: Root
     public let keyPath: KeyPath<Root, Value>
@@ -82,7 +88,9 @@ public struct _KeyPathHashable<Root, Value: Hashable>: Hashable {
 }
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _ArbitrarilyIdentifiedValue<Value, ID: Hashable>: CustomStringConvertible, Identifiable {
     public let value: Value
     public let _id: (Value) -> ID
@@ -110,7 +118,9 @@ public struct _ArbitrarilyIdentifiedValue<Value, ID: Hashable>: CustomStringConv
 }
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _KeyPathHashIdentifiableValue<Value, ID: Hashable>: CustomStringConvertible, Identifiable {
     public let value: Value
     public let keyPath: KeyPath<Value, ID>

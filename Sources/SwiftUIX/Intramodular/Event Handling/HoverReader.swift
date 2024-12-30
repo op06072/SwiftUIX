@@ -9,7 +9,9 @@ import SwiftUI
 @available(iOS 13.4, macOS 10.15, *)
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct HoverProxy: Hashable {
     public var isHovering: Bool
 }
@@ -17,7 +19,9 @@ public struct HoverProxy: Hashable {
 @available(iOS 13.4, macOS 10.15, *)
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct HoverReader<Content: View>: View {
     let content: (HoverProxy) -> Content
     

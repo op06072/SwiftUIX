@@ -7,14 +7,18 @@
 import AppKit
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public class NSGraphicsImageRendererFormat {
     public var scale: Double = 1
     
     public init() {}
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public class NSGraphicsImageRendererContext {
     public let cgContext: CGContext
     
@@ -31,7 +35,9 @@ public class NSGraphicsImageRendererContext {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public class NSGraphicsImageRenderer {
     public let size: CGSize
     public let format: NSGraphicsImageRendererFormat

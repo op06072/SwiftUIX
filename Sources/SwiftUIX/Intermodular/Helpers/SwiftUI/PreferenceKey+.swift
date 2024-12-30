@@ -5,7 +5,9 @@
 import SwiftUI
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct PreferenceValue<Key: PreferenceKey>: View {
     public let key: Key.Type
     public let value: Key.Value
@@ -22,7 +24,9 @@ public struct PreferenceValue<Key: PreferenceKey>: View {
 }
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct TransformPreferenceValue<Key: PreferenceKey>: View {
     public let key: Key.Type
     public let callback: (inout Key.Value) -> Void

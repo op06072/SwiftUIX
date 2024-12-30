@@ -8,7 +8,9 @@ import Combine
 import Swift
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public class _AnyWindowPresentationController: ObservableObject {
     init() {
         
@@ -18,9 +20,13 @@ public class _AnyWindowPresentationController: ObservableObject {
 @available(macCatalystApplicationExtension, unavailable)
 @available(iOSApplicationExtension, unavailable)
 @available(tvOSApplicationExtension, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public final class _WindowPresentationController<Content: View>: _AnyWindowPresentationController {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum ContentBacking {
         case view(Content)
         case hostingController(AppKitOrUIKitHostingWindow<Content>._ContentViewControllerType)

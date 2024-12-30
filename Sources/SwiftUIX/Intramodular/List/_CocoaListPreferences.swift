@@ -4,7 +4,9 @@
 
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _CocoaListPreferences: Sendable {
     public var cell: Cell = nil
     
@@ -28,9 +30,13 @@ extension _CocoaListPreferences {
             public var detachHostingView: Bool = false
         }
         
-        @_documentation(visibility: internal)
+        #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum SizingOptions: Sendable {
-            @_documentation(visibility: internal)
+            #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum Custom: Sendable {
                 case indexPath(@Sendable (IndexPath) -> OptionalDimensions)
             }

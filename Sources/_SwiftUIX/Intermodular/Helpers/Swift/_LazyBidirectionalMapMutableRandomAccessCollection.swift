@@ -4,7 +4,9 @@
 
 import Swift
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _LazyBidirectionalMapMutableRandomAccessCollection<C: MutableCollection & RandomAccessCollection, T>: MutableCollection, RandomAccessCollection {
     public typealias Index = C.Index
     public typealias Element = T

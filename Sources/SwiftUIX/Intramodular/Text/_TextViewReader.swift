@@ -8,7 +8,9 @@ import Combine
 import Swift
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _SwiftUIX_TextEditorEvent: Hashable {
     case insert(text: NSAttributedString, range: NSRange?)
     case delete(text: NSAttributedString, range: NSRange)
@@ -30,7 +32,9 @@ public enum _SwiftUIX_TextEditorEvent: Hashable {
 }
 
 @available(macOS 11.0, *)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _TextViewReader<Content: View>: View {
     private let content: (_TextEditorProxy) -> Content
     
@@ -50,7 +54,9 @@ public struct _TextViewReader<Content: View>: View {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public final class _TextEditorProxy: Hashable, ObservableObject, @unchecked Sendable {
     public typealias _Base = any _SwiftUIX_AnyIndirectValueBox<AppKitOrUIKitTextView?>
     

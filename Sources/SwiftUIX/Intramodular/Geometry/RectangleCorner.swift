@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 /// A corner of a rectangle.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum RectangleCorner: CaseIterable, Hashable, Sendable {
     public static var allCases: Set<Self> {
         [.topLeading, .topTrailing, .bottomLeading, .bottomTrailing]

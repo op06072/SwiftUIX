@@ -42,7 +42,9 @@ extension NavigationLink where Label == Text {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _ActivateNavigationLink: Hashable {
     public let action: Action
     

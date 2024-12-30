@@ -7,7 +7,9 @@ import Swift
 import SwiftUI
 
 /// A style for the authorization button.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum AuthorizationAppleIDButtonStyle: Equatable {
     #if os(iOS) || os(macOS) || os(tvOS) || targetEnvironment(macCatalyst)
     /// A button with a white outline.

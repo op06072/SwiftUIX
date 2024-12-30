@@ -10,7 +10,9 @@ import SwiftUI
 @available(macCatalystApplicationExtension, unavailable)
 @available(iOSApplicationExtension, unavailable)
 @available(tvOSApplicationExtension, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct AuthorizationAppleIDButton {
     @usableFromInline
     let type: AuthorizationAppleIDButtonType

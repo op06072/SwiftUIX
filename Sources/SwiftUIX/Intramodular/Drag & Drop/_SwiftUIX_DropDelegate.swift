@@ -24,7 +24,9 @@ public protocol _SwiftUIX_DropDelegate<DropInfoType> {
 @available(iOS 14.0, macOS 10.15, *)
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _SwiftUIX_AnyDropDelegate<DropInfo: _SwiftUI_DropInfoProtocol>: _SwiftUIX_DropDelegate {
     private var _validateDrop: (_: DropInfo) -> Bool = { _ in true }
     private var _onDrop: (_: DropInfo) -> Bool = { _ in false }

@@ -31,7 +31,9 @@ extension EnvironmentValues {
 // MARK: - API
 
 /// A button that triggers a regression.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 @MainActor
 public struct PreviousButton<Label: View>: ActionLabelView, _ActionPerformingView {
     @Environment(\.progressionController) var progressionController
@@ -67,7 +69,9 @@ public struct PreviousButton<Label: View>: ActionLabelView, _ActionPerformingVie
 }
 
 /// A button that triggers a progression.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 @MainActor
 public struct NextButton<Label: View>: ActionLabelView, _ActionPerformingView {
     @Environment(\.progressionController) var progressionController

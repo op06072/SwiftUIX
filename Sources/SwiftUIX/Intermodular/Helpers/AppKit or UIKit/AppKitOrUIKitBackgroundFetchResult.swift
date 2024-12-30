@@ -6,7 +6,9 @@ import Swift
 
 #if canImport(AppKit)
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum AppKitOrUIKitBackgroundFetchResult {
     case newData
     case noData
@@ -15,7 +17,9 @@ public enum AppKitOrUIKitBackgroundFetchResult {
 
 #elseif canImport(WatchKit)
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum AppKitOrUIKitBackgroundFetchResult {
     case newData
     case noData

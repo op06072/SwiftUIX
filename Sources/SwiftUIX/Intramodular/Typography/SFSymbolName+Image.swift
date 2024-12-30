@@ -54,7 +54,9 @@ extension AppKitOrUIKitImage {
         }
     }
     
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum ImageRenderingMode {
         case alwaysOriginal
     }

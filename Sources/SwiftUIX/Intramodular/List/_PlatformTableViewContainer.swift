@@ -7,7 +7,9 @@ import SwiftUI
 #if os(macOS)
 
 @_spi(Internal)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 open class _PlatformTableViewContainer<Configuration: _CocoaListConfigurationType>: NSScrollView {
     private var _coordinator: _CocoaList<Configuration>.Coordinator!
     

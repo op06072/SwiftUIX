@@ -6,7 +6,9 @@ import Combine
 import Swift
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct AnyPresentationView: View {
     enum Base {
         case native(AnyView)

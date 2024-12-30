@@ -5,7 +5,9 @@
 import Swift
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _SwiftUIX_AxisStackLayoutDirection {
     case forward
     case reverse
@@ -13,7 +15,9 @@ public enum _SwiftUIX_AxisStackLayoutDirection {
 
 /// A view that arranges its children in a vertical/horizontal line.
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct AxisStack<Content: View>: View {
     public let axis: Axis3D
     public let alignment: Alignment

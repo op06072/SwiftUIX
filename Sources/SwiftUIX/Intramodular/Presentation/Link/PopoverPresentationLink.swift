@@ -8,7 +8,9 @@ import SwiftUI
 
 #if os(iOS) || os(macOS) || targetEnvironment(macCatalyst)
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct PopoverPresentationLink<Destination: View, Label: View>: PresentationLinkView {
     private let arrowEdge: Edge = .top
     private let destination: Destination

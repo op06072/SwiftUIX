@@ -6,7 +6,9 @@ import Combine
 import Swift
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 open class ArrayReducePreferenceKey<Element>: PreferenceKey {
     public typealias Value = [Element]
     
@@ -19,7 +21,9 @@ open class ArrayReducePreferenceKey<Element>: PreferenceKey {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 open class TakeFirstPreferenceKey<T: Equatable>: PreferenceKey {
     public typealias Value = T?
     
@@ -36,7 +40,9 @@ open class TakeFirstPreferenceKey<T: Equatable>: PreferenceKey {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 open class TakeLastPreferenceKey<T: Equatable>: PreferenceKey {
     public typealias Value = T?
     

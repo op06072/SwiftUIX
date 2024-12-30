@@ -5,9 +5,13 @@
 import SwiftUI
 import Swift
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct ScrollViewContentOffset: Hashable {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum Origin {
         case topLeading
         case bottomTrailing

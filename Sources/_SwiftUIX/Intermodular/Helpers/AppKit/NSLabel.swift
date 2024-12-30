@@ -24,7 +24,9 @@ import SwiftUI
  * Provide accessibility information and localized strings.
  */
 @IBDesignable
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 open class NSLabel: NSView {
     private let defaultBackgroundColor = NSColor.clear
     

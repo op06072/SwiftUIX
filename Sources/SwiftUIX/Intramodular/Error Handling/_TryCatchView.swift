@@ -5,7 +5,9 @@
 import Swift
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _TryCatchView<Content: View, RecoveryContent: View>: View {
     let content: () throws ->  Content
     let recovery: (Error) -> RecoveryContent

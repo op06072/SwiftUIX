@@ -6,9 +6,13 @@ import Combine
 import Swift
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public final class _PublisherObserver<P: Publisher, S: Scheduler>: ObservableObject, Subscriber {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum SubscriptionPolicy {
         case immediate
         case deferred

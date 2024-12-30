@@ -8,7 +8,9 @@ import Swift
 import SwiftUI
 import UIKit
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct VisualEffectView<Content: View>: UIViewRepresentable {
     public typealias UIViewType = UIVisualEffectView
     

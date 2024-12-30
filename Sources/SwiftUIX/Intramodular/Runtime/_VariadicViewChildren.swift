@@ -5,7 +5,9 @@
 import SwiftUI
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _VariadicViewChildren: View {
     @usableFromInline
     let base: SwiftUI._VariadicView.Children

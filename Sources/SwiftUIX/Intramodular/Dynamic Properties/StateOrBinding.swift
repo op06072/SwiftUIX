@@ -7,7 +7,9 @@ import SwiftUI
 /// A property wrapper that can read and write a value from a wrapped `State` or `Binding`.
 @propertyWrapper
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct StateOrBinding<Value>: DynamicProperty {
     @usableFromInline
     enum Storage: DynamicProperty {

@@ -8,7 +8,9 @@ import Swift
 import SwiftUI
 import UIKit
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 open class CocoaPresentationHostingController: CocoaHostingController<AnyPresentationView> {
     var presentation: AnyModalPresentation {
         didSet {

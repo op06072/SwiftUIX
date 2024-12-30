@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 /// A container for a view to be presented as a popover.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct Popover<Content: View> {
     public let content: Content
     
@@ -129,7 +131,9 @@ extension PresentationLink where Label == SwiftUI.Label<Text, Image> {
 
 // MARK: - Auxiliary
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct PopoverArrowDirection: OptionSet {
     public let rawValue: Int
     

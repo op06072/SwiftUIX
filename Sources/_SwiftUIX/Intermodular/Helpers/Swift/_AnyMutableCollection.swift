@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 // Type-erasing wrapper structure for mutable collections
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _AnyMutableCollection<Element>: MutableCollection {
     public typealias Index = _AnyMutableCollectionIndex
     
@@ -45,7 +47,9 @@ public struct _AnyMutableCollection<Element>: MutableCollection {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _AnyMutableCollectionIndex: Comparable {
     public let base: Any
     

@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 /// A lazily loaded view.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct LazyView<Body: View>: View {
     @Environment(\._lazyViewResolver) private var _lazyViewResolver
     
@@ -27,9 +29,13 @@ public struct LazyView<Body: View>: View {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct LazyAppearViewProxy {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum Appearance: Equatable {
         case active
         case inactive
@@ -52,7 +58,9 @@ public enum Appearance: Equatable {
 }
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _DeferredView<Content: View>: View {
     @usableFromInline
     let content: () -> Content
@@ -94,9 +102,13 @@ public struct _DeferredView<Content: View>: View {
 }
 
 /// A view that appears lazily.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct LazyAppearView<Content: View>: View {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum Placeholder {
         case hiddenFrame // frame of content.hidden()
     }
@@ -276,7 +288,9 @@ public protocol _LazyViewResolver {
     func resolve<Content: View>(_ content: () -> Content) -> Content
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _AnyLazyViewResolver {
     public typealias Resolve = (() -> (any View)) -> any View
     

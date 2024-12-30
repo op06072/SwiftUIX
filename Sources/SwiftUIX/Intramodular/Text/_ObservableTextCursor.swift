@@ -49,7 +49,9 @@ extension _ObservableTextCursor {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public final class _ObservableTextCursor: ObservableObject {
     private weak var owner: (any _PlatformTextViewType)?
     

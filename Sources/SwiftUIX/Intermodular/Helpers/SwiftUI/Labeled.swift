@@ -5,7 +5,9 @@
 import SwiftUI
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct Labeled<Label: View, Control: View>: View {
     @usableFromInline
     let label: Label

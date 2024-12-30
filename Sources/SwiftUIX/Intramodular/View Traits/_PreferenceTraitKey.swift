@@ -45,7 +45,9 @@ extension View {
 
 // MARK: - Auxiliary
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _PreferenceTraitsStorage: Equatable {
     fileprivate var base: [ObjectIdentifier: AnyEquatable] = [:]
     
@@ -83,14 +85,18 @@ extension _ViewTraitKeys {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _PreferenceTraitKeyOverride<Key: _PreferenceTraitKey>: _ViewTraitKey {
     public static var defaultValue: Key.Value? {
         nil
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 open class _ArrayReducePreferenceTraitKey<Element: Equatable>: _PreferenceTraitKey {
     public typealias Value = [Element]
     

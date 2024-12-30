@@ -21,7 +21,9 @@ public protocol _SwiftUI_DropInfoProtocol {
 
 #if os(macOS)
 @available(macOS 11.0, iOS 14.0, watchOS 7.0, tvOS 14.0, *)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _SwiftUIX_DropInfo: _SwiftUI_DropInfoProtocol {
     public let location: CGPoint
     
@@ -46,7 +48,9 @@ public struct _SwiftUIX_DropInfo: _SwiftUI_DropInfoProtocol {
 import UIKit
 
 @available(macOS 11.0, iOS 14.0, watchOS 7.0, tvOS 14.0, *)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _SwiftUIX_DropInfo: _SwiftUI_DropInfoProtocol {
     public let location: CGPoint
     

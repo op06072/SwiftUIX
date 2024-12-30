@@ -35,7 +35,9 @@ extension _ViewTraitValuesProtocol {
 
 /// An analogue to `EnvironmentValues`, but for view traits.
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _ViewTraitValues {
     public var base: _ViewTraitValuesProtocol
     

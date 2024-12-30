@@ -7,9 +7,13 @@ import SwiftUI
 
 #if (os(iOS) && canImport(CoreTelephony)) || os(tvOS) || targetEnvironment(macCatalyst)
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _CollectionViewConfiguration: ExpressibleByNilLiteral {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum UnsafeFlag {
         case cacheCellContentHostingControllers
         case disableCellHostingControllerEmbed

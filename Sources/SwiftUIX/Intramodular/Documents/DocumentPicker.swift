@@ -9,7 +9,9 @@ import Swift
 import SwiftUI
 import UniformTypeIdentifiers
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct DocumentPicker: UIViewControllerRepresentable {
     public typealias UIViewControllerType = UIDocumentPickerViewController
     

@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 /// A model suitable for representing sections of a list.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct ListSection<SectionType, ItemType> {
     enum _ItemsStorage {
         case array([ItemType])

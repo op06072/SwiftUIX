@@ -14,7 +14,9 @@ import UIKit
 #endif
 
 /// The keyboard type to be displayed.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _TextField_KeyboardType {
     case `default`
     case asciiCapable

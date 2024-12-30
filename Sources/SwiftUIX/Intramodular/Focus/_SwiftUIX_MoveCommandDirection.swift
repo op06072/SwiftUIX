@@ -5,7 +5,9 @@
 import SwiftUI
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _SwiftUIX_MoveCommandDirection {
     case up
     case down

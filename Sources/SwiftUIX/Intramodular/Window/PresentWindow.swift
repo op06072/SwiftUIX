@@ -7,7 +7,9 @@ import SwiftUI
 #if os(iOS) || os(macOS) || os(tvOS) || os(visionOS) || targetEnvironment(macCatalyst)
 
 @MainActor
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct PresentWindow<Content: View>: View {
     private let content: () -> Content
     private let windowStyle: _WindowStyle

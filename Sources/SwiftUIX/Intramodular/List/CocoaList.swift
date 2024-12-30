@@ -26,7 +26,9 @@ import SwiftUI
 ///     }
 /// }
 /// ```
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct CocoaList<Content: View>: View {
     private let _content: (Self) -> AnyView
     
@@ -86,7 +88,9 @@ extension View {
 
 // MARK: - Auxiliary
  
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _CocoaListItemID: Hashable {
     public let id: AnyHashable
 }

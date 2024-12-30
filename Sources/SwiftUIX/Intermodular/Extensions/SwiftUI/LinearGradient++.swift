@@ -6,7 +6,9 @@ import Foundation
 import SwiftUI
 
 extension LinearGradient {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum _LinearGradientDirection {
         case up
         case down

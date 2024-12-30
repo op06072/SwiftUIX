@@ -8,7 +8,9 @@ import Swift
 import SwiftUI
 
 @_spi(Internal)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public class _AnyObservableObjectMutableBox<WrappedValue>: ObservableObject {
     public var __unsafe_opaque_base: Any? {
         get {
@@ -28,7 +30,9 @@ public class _AnyObservableObjectMutableBox<WrappedValue>: ObservableObject {
 }
 
 @_spi(Internal)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public final class _ObservableObjectMutableBox<Value, WrappedValue>: _AnyObservableObjectMutableBox<WrappedValue> {
     private var baseSubscription: AnyCancellable?
     

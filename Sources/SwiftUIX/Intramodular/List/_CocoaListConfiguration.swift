@@ -14,7 +14,9 @@ public protocol _CocoaListConfigurationType {
     var preferences: _CocoaListPreferences { get set }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _CocoaListConfiguration<Data: _CocoaListDataSourceType, ViewProvider: _CocoaListViewProviderType>: _CocoaListConfigurationType where Data.SectionType == ViewProvider.SectionType, Data.ItemType == ViewProvider.ItemType {
     public let data: Data
     public let viewProvider: ViewProvider

@@ -7,7 +7,9 @@ import SwiftUI
 
 #if os(iOS) || os(tvOS) || os(visionOS) || targetEnvironment(macCatalyst)
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public class _PlatformTableViewCell<ItemType: Identifiable, Content: View>: UITableViewCell {
     struct State: Hashable {
         let isFocused: Bool

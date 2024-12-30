@@ -5,7 +5,9 @@
 import Swift
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct ResultView<SuccessView: View, FailureView: View, Success, Failure: Error>: View {
     @usableFromInline
     let successView: SuccessView?

@@ -61,7 +61,9 @@ extension AppKitOrUIKitHostingWindowProtocol {
 }
 #endif
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _AppKitOrUIKitHostingWindowConfiguration: Hashable, Sendable {
     public var style: _WindowStyle
     public var canBecomeKey: Bool?
@@ -102,7 +104,9 @@ public struct _AppKitOrUIKitHostingWindowConfiguration: Hashable, Sendable {
 @available(macCatalystApplicationExtension, unavailable)
 @available(iOSApplicationExtension, unavailable)
 @available(tvOSApplicationExtension, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 open class AppKitOrUIKitHostingWindow<Content: View>: AppKitOrUIKitWindow, AppKitOrUIKitHostingWindowProtocol {
     public typealias _ContentViewControllerType = CocoaHostingController<_AppKitOrUIKitHostingWindowContent<Content>>
     

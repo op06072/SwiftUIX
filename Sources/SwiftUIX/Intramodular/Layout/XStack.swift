@@ -8,7 +8,9 @@ import SwiftUI
 /// A view that overlays its children, aligning them in both axes.
 ///
 /// Similar to `ZStack`, but also fills the entire coordinate space of its container view if possible.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct XStack<Content: View>: View {
     public let alignment: Alignment
     public let content: Content
@@ -37,7 +39,9 @@ public struct XStack<Content: View>: View {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _DeferredXStack<Content: View>: View {
     public let alignment: Alignment
     public let content: Content

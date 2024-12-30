@@ -9,7 +9,9 @@ import Swift
 import SwiftUI
 
 /// A proxy value allowing the collection views within a view hierarchy to be manipulated programmatically.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct CocoaScrollViewProxy {
     @UnsafeWeakReferenceBox
     var base: (any _AppKitOrUIKitHostingScrollViewType)?
@@ -34,7 +36,9 @@ public struct CocoaScrollViewProxy {
 }
 
 /// A view whose child is defined as a function of a `ScrollViewProxy` targeting the collection views within the child.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct CocoaScrollViewReader<Content: View>: View {
     @Environment(\._cocoaScrollViewProxy) var _environment_cocoaScrollViewProxy
     

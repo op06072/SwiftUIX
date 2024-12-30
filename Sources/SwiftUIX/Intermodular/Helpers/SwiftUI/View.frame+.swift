@@ -342,7 +342,9 @@ protocol _opaque_FrameModifiedContent {
 }
 
 @_frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _GreedyFrameSize {
     case greedy
 }

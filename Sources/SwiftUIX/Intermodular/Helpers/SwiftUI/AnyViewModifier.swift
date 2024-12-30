@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 /// A type-erased view modifier.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct AnyViewModifier: ViewModifier {
     private let makeBody: (Content) -> AnyView
 

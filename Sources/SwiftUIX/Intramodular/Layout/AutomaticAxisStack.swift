@@ -8,7 +8,9 @@ import SwiftUI
 /// A view that arranges its children in a vertical/horizontal line.
 ///
 /// The axis is determined in accordance to the size proposed by the parent container.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct AutomaticAxisStack<Content: View>: View {
     public let preferredAxis: Axis
     public let alignment: Alignment
@@ -82,7 +84,9 @@ public struct AutomaticAxisStack<Content: View>: View {
 ///
 /// The axis is determined in accordance to the size proposed by the parent container.
 /// The preferred line is horizontal.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct HVStack<Content: View>: View {
     public let alignment: Alignment
     public let spacing: CGFloat?
@@ -113,7 +117,9 @@ public struct HVStack<Content: View>: View {
 ///
 /// The axis is determined in accordance to the size proposed by the parent container.
 /// The preferred line is vertical.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct VHStack<Content: View>: View {
     public let alignment: Alignment
     public let spacing: CGFloat?

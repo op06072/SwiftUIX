@@ -8,7 +8,9 @@ import SwiftUI
 /// The relative amount of padding, to be used with `View/padding(_:_:)`.
 ///
 /// **Do not** reference this type directly.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _RelativePaddingAmount: CaseIterable, Hashable {
     case extraSmall
     case small

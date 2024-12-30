@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 /// A convenience around a closure of the type `() -> Void`.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct Action: DynamicAction, Hashable, Identifiable, @unchecked Sendable {
     public let id: AnyHashable?
     
@@ -99,7 +101,9 @@ extension Action {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct PerformAction: _ActionPerformingView {
     private let action: Action
     private let deferred: Bool
@@ -177,7 +181,9 @@ struct _CreateActionTrampoline<Content: View>: View {
 }
 
 @_spi(Internal)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _CreateActionTrampolines<Key: Hashable, Content: View>: View {
     private class ActionTrampoline {
         var base: Action

@@ -11,7 +11,9 @@ public protocol ScrollIndicatorStyle {
 
 // MARK: - API
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct DefaultScrollViewIndicatorStyle: Hashable, ScrollIndicatorStyle {
     public init() {
         
@@ -21,7 +23,9 @@ public struct DefaultScrollViewIndicatorStyle: Hashable, ScrollIndicatorStyle {
 /// A scroll indicator style that hides all scroll view indicators within a view hierarchy.
 ///
 /// `HiddenScrollViewIndicatorStyle/init(vertical:horizontal:)` allows you to specify
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct HiddenScrollViewIndicatorStyle: Hashable, ScrollIndicatorStyle {
     public let vertical: Bool
     public let horizontal: Bool
@@ -35,7 +39,9 @@ public struct HiddenScrollViewIndicatorStyle: Hashable, ScrollIndicatorStyle {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct InsetScrollViewIndicatorStyle: Hashable, ScrollIndicatorStyle {
     public let insets: (horizontal: EdgeInsets, vertical: EdgeInsets)
     

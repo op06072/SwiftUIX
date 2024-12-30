@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 #if os(iOS) || targetEnvironment(macCatalyst)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct ListSeparatorStyleNoneModifier: ViewModifier {
     @inlinable
     public func body(content: Content) -> some View {

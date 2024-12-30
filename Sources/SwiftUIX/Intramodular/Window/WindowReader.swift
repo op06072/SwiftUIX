@@ -9,7 +9,9 @@ import SwiftUI
 @available(macCatalystApplicationExtension, unavailable)
 @available(iOSApplicationExtension, unavailable)
 @available(tvOSApplicationExtension, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct WindowProxy {
     weak var window: AppKitOrUIKitHostingWindowProtocol?
     
@@ -69,7 +71,9 @@ extension _WindowPresentationController {
 @available(macCatalystApplicationExtension, unavailable)
 @available(iOSApplicationExtension, unavailable)
 @available(tvOSApplicationExtension, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct WindowReader<Content: View>: View {
     @Environment(\._windowProxy) var _windowProxy: WindowProxy
     

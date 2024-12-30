@@ -7,7 +7,9 @@
 import SwiftUI
 import UIKit
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public final class MutableAppKitOrUIKitViewWrapper<Base: UIView>: UIView {
     private var _base: Base?
     
@@ -56,7 +58,9 @@ public final class MutableAppKitOrUIKitViewWrapper<Base: UIView>: UIView {
 import AppKit
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public final class MutableAppKitOrUIKitViewWrapper<Base: NSView>: NSView {
     private var _base: Base?
     

@@ -7,7 +7,9 @@
 
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _AnyApp: SwiftUI.App {
     public var body: some Scene {
         _EmptyScene()
@@ -53,7 +55,9 @@ extension App {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _SwiftUIX_AppActivationPolicy: Hashable {
     case regular
     case accessory

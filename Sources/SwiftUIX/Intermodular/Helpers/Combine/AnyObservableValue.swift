@@ -9,7 +9,9 @@ import SwiftUI
 
 /// An abstract base class for an observable value box.
 @dynamicMemberLookup
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public class AnyObservableValue<Value>: _SwiftUIX_AnyIndirectValueBox, ObservableObject {
     public struct Configuration {
         public var deferUpdates: Bool

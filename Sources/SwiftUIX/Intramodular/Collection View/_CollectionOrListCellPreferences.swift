@@ -8,7 +8,9 @@ import SwiftUI
 /// An internal structure used to manage cell preferences for `CocoaList` and `CollectionView`.
 @_spi(Internal)
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _CollectionOrListCellPreferences: Hashable {
     public var isFocusable: Bool?
     public var isHighlightable: Bool?

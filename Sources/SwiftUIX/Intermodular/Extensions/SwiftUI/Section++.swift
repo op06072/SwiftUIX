@@ -145,7 +145,9 @@ extension _SectionView where Parent == Text, Content: View, Footer == Text {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _SectionX<Header: View, Content: View, Footer: View>: _SectionView {
     public let header: Header
     public let content: Content

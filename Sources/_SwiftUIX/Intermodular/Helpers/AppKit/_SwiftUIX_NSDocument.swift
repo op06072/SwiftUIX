@@ -6,9 +6,13 @@
 
 import AppKit
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 open class _SwiftUIX_NSDocument: NSDocument {
+    #if swift(>=5.8)
     @_documentation(visibility: internal)
+    #endif
 public enum UnsafeFlag: Hashable, Sendable {
         case ephemeral
     }

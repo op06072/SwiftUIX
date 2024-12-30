@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 /// A view that unwraps an `Optional` to produce some content.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct UnwrapOptionalView<Content: View>: View {
     private let content: Content?
     

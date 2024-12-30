@@ -104,7 +104,9 @@ fileprivate struct _ZeroSizeView: AppKitOrUIKitViewRepresentable {
 }
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct ZeroSizeView: View {
     public var body: some View {
         _ZeroSizeView()
@@ -123,7 +125,9 @@ public struct ZeroSizeView: View {
 
 /// A zero-size view for when `EmptyView` just doesn't work.
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct ZeroSizeView: View {
     public var body: some View {
         Color.almostClear

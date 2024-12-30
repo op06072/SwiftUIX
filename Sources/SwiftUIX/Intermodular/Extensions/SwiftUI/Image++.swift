@@ -8,7 +8,9 @@ import SwiftUI
 extension Image {
     public typealias Encoding = _SwiftUIX_Encoding
     
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _SwiftUIX_Encoding {
         case png
         case jpeg(compressionQuality: CGFloat?)

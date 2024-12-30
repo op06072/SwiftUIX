@@ -6,9 +6,13 @@ import Swift
 import SwiftUI
 
 /// A view that shows that a task is in progress.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct ActivityIndicator {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum Style {
         #if os(macOS)
         case mini

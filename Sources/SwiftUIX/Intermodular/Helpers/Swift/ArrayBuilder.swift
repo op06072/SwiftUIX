@@ -10,7 +10,9 @@ public typealias ArrayBuilder = _ArrayBuilder
 #endif
 
 @resultBuilder
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _ArrayBuilder<Element> {
     @_optimize(speed)
     @_transparent

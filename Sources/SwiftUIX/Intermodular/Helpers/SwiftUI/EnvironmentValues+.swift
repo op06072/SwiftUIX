@@ -7,7 +7,9 @@ import Swift
 import SwiftUI
 
 /// A view that allows for inlined access to an `EnvironmentValues` key path.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct EnvironmentValueAccessView<Value, Content: View>: View {
     private let keyPath: KeyPath<EnvironmentValues, Value>
     private let content: (Value) -> Content

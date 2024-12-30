@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 extension HStack {
+    #if swift(>=5.8)
     @_documentation(visibility: internal)
+    #endif
 public enum _ProportionalFill {
         case proportionally
     }

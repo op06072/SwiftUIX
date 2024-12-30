@@ -12,9 +12,13 @@
 
 import Foundation
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public final class _SwiftUIX_SetActor<Option: SetAlgebra, ReactionType> {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum Action {
         case onEmpty
         case onChange
@@ -22,7 +26,9 @@ public enum Action {
         case onRemoval(_ option: Option)
     }
     
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum ExecutionType {
         case once
         case eternal

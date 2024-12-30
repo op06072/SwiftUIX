@@ -7,7 +7,9 @@ import SwiftUI
 
 @available(iOS 13.0, tvOS 13.0, watchOS 7.0, *)
 @available(macOS, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _NestedNavigationView<Content: View>: View {
     public let content: Content
     

@@ -11,7 +11,9 @@ public protocol _AppKitOrUIKitApplicationDelegateItem: Identifiable {
 #if os(macOS)
 
 @propertyWrapper
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _CocoaApplicationDelegateAdaptor: DynamicProperty {
     private static var configuration: Configuration!
     private static var items: (() -> [any _AppKitOrUIKitApplicationDelegateItem])?

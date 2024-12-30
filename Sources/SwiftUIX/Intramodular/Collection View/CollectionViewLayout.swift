@@ -47,7 +47,9 @@ extension EnvironmentValues {
 
 #if os(iOS) || os(tvOS) || os(visionOS) || targetEnvironment(macCatalyst)
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct FlowCollectionViewLayout: Hashable, CollectionViewLayout {
     public let axes: Axis.Set
     public let minimumLineSpacing: CGFloat?
@@ -135,7 +137,9 @@ public struct FlowCollectionViewLayout: Hashable, CollectionViewLayout {
 
 #elseif os(macOS)
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct FlowCollectionViewLayout: Hashable, CollectionViewLayout {
     public init() {
         

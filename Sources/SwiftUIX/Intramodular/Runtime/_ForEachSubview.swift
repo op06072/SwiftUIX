@@ -5,7 +5,9 @@
 import SwiftUI
 
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _ForEachSubview<Content: View, ID: Hashable, Subview: View>: View {
     private let content: _SwiftUI_VariadicView<Content>
     private let id: KeyPath<_VariadicViewChildren.Subview, ID>

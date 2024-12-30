@@ -31,7 +31,9 @@ extension NSImage {
 }
 
 extension NSImage {
+    #if swift(>=5.8)
     @_documentation(visibility: internal)
+    #endif
 public enum Orientation: UInt32 {
         case up = 1
         case upMirrored = 2

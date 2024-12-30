@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 /// The orientation of the app's user interface.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum UserInterfaceOrientation {
     case portrait
     case portraitUpsideDown

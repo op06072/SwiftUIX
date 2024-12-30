@@ -13,7 +13,9 @@ import UIKit
 @available(macCatalystApplicationExtension, unavailable)
 @available(iOSApplicationExtension, unavailable)
 @available(tvOSApplicationExtension, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public final class Keyboard: ObservableObject {
     public static let main = Keyboard()
     

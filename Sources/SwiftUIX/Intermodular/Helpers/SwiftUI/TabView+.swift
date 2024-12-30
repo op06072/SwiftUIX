@@ -27,7 +27,9 @@ extension TabView  {
 }
 
 @available(iOS 13.0, macOS 10.15, tvOS 13.0, watchOS 7.0, *)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _SwiftUIX_TitledTabViewContent<Content: View>: View {
     let titles: [String]
     let content: Content

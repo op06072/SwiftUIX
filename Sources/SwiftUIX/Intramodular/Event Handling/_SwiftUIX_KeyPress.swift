@@ -9,7 +9,9 @@ import SwiftUI
 @available(iOS 14.0, macOS 11.0, *)
 @available(tvOS, unavailable)
 @available(watchOS, unavailable)
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _SwiftUIX_KeyPress: Hashable, Sendable {
     public let phase: Phases
     public let key: KeyEquivalent
@@ -57,7 +59,9 @@ extension _SwiftUIX_KeyPress {
         public static let all: Self = [.down, .repeat, .up]
     }
     
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
     public enum Result: Hashable, Sendable {
         /// The action consumed the event, preventing dispatch from continuing.
         case handled

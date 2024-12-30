@@ -6,7 +6,9 @@
 
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _AppKitOrUIKitViewAnimation: Equatable  {
     public let options: AppKitOrUIKitView.AnimationOptions?
     public let duration: CGFloat?

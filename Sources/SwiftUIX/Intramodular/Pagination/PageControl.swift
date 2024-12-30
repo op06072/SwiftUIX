@@ -10,7 +10,9 @@ import UIKit
 
 /// A SwiftUI port of `UIPageControl`.
 @frozen
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct PageControl {
     public let numberOfPages: Int
     public let currentPage: Binding<Int>

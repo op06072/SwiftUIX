@@ -4,9 +4,13 @@
 
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _IfAvailable {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum Available {
         case available
     }
@@ -14,7 +18,9 @@ public enum Available {
     case `if`(Available)
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _SwiftUI_TargetPlatformType {
     case iOS
     case macOS
@@ -55,41 +61,57 @@ extension _SwiftUI_TargetPlatformType {
 }
 #endif
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _SwiftUI_TargetPlatform {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum iOS {
         case iOS
     }
     
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum macOS {
         case macOS
     }
     
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum tvOS {
         case tvOS
     }
     
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum visionOS {
         case visionOS
     }
 
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum watchOS {
         case watchOS
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum _TargetPlatformSpecific<Platform> {
     
 }
 
 extension _TargetPlatformSpecific where Platform == _SwiftUI_TargetPlatform.iOS {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum NavigationBarItemTitleDisplayMode {
         case automatic
         case inline
@@ -97,7 +119,9 @@ public enum NavigationBarItemTitleDisplayMode {
     }
 }
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _TargetPlatformConditionalModifiable<Root, Platform> {
     public typealias SpecificTypes = _TargetPlatformSpecific<_SwiftUI_TargetPlatform.iOS>
     
@@ -273,7 +297,9 @@ extension _TargetPlatformConditionalModifiable where Root: View, Platform == _Sw
 // MARK: - Auxiliary
 
 extension _SwiftUI_TargetPlatform.macOS {
-    @_documentation(visibility: internal)
+    #if swift(>=5.8)
+@_documentation(visibility: internal)
+#endif
 public enum _ControlActiveState: Hashable, Sendable {
         case key
         case active

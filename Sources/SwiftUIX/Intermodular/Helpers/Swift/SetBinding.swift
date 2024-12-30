@@ -8,7 +8,9 @@ import SwiftUI
 /// A `Binding` that only allows the _setting_ of values.
 @frozen
 @propertyWrapper
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct SetBinding<Value> {
     @usableFromInline
     let set: (Value) -> ()

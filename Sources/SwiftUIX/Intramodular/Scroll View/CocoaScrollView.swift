@@ -8,7 +8,9 @@ import SwiftUI
 #if (os(iOS) && canImport(CoreTelephony)) || os(tvOS) || targetEnvironment(macCatalyst)
 
 /// A SwiftUI port of `UIScrollView`.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct CocoaScrollView<Content: View>: UIViewRepresentable  {
     public typealias Offset = ScrollView<Content>.ContentOffset
     public typealias UIViewType = UIHostingScrollView<Content>

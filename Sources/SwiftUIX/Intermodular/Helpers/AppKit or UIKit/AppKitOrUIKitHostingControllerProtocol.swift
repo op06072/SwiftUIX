@@ -183,7 +183,9 @@ extension AppKitOrUIKitHostingControllerProtocol {
 
 // MARK: - Auxiliary
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct AppKitOrUIKitLayoutSizeProposal: Hashable {
     public struct _SizingConstraints: Hashable {
         public fileprivate(set) var minimum: OptionalDimensions

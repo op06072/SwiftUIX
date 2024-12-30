@@ -8,7 +8,9 @@ import SwiftUI
 #if os(iOS) || os(tvOS) || os(visionOS)
 
 /// WIP: Should be renamed to `_CocoaList`.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct CocoaList<
     SectionType: Identifiable,
     ItemType: Identifiable,

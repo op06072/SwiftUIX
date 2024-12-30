@@ -6,7 +6,9 @@ import Swift
 import SwiftUI
 
 /// The orientation of a device.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public enum DeviceOrientation: CaseIterable, _HashIdentifiable {
     case portrait
     case portraitUpsideDown

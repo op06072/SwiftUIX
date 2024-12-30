@@ -8,7 +8,9 @@ import SwiftUI
 #if (os(iOS) && canImport(CoreTelephony)) || os(tvOS) || targetEnvironment(macCatalyst)
 
 /// A control that displays an editable text interface.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct CocoaTextField<Label: View>: View {
     typealias Rect = ((_ bounds: CGRect, _ original: CGRect) -> CGRect)
     

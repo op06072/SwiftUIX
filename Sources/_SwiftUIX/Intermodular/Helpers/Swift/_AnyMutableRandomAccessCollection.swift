@@ -5,7 +5,9 @@
 import Swift
 import SwiftUI
 
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct _AnyMutableRandomAccessCollection<Element>: RandomAccessCollection, MutableCollection {
     public typealias Index = _AnyMutableCollectionIndex
     

@@ -37,7 +37,9 @@ protocol _CollectionViewProxyBase: AppKitOrUIKitViewController {
 }
 
 /// A proxy value allowing the collection views within a view hierarchy to be manipulated programmatically.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct CollectionViewProxy: Hashable {
     weak var base: _CollectionViewProxyBase?
     
@@ -127,7 +129,9 @@ public struct CollectionViewProxy: Hashable {
 }
 
 /// A view whose child is defined as a function of a `CollectionViewProxy` targeting the collection views within the child.
+#if swift(>=5.8)
 @_documentation(visibility: internal)
+#endif
 public struct CollectionViewReader<Content: View>: View {
     @Environment(\._collectionViewProxy) var _environment_collectionViewProxy
     
